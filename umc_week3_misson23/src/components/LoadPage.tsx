@@ -27,11 +27,11 @@ const LoadPage = () => {
         {
           headers: {
             accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmODYwMTJjODYyMDk4MGI4MDZkNmYzOGI2OGJhYzMxNyIsIm5iZiI6MTc0NTgxNDU4My43MzQwMDAyLCJzdWIiOiI2ODBmMDQzNzVhZDBiNjdjNjZlYWM0ZTAiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ob2UXOC5RdMDDsOclc8WGYQFYjxMJQviwlHSGfZVel0'
+            Authorization:  `Bearer ${import.meta.env.VITE_TMDB_KEY}`
           },
         }
       );
-
+      console.log(import.meta.env.VITE_TMDB_KEY)
       setMovies(data.results);
       console.log(category);
     }catch{  
